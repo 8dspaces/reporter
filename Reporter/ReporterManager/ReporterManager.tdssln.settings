@@ -1,0 +1,41 @@
+<TestDesignStudioSolutionUserSettings>
+  <Projects>
+    <Project Guid="f3c94e40-132f-415d-995d-1be050787ef5" Name="ReporterManager">
+      <Settings>
+        <ShowHiddenFilesAndFolders>1</ShowHiddenFilesAndFolders>
+        <RootExpanded>1</RootExpanded>
+      </Settings>
+      <Files>
+        <File FileGuid="a0e014ee-755e-486f-9efa-ed315b09a0a0" />
+        <File FileGuid="85aa765a-8bda-4a90-af64-7a3a606cd8c7" />
+        <File FileGuid="a0639851-8aaa-45aa-9bf0-ccae3b4c8ead" OpenFileOnProjectLoad="1" />
+        <File FileGuid="99311364-0fc1-4674-835a-e2e4e809c9ae" OpenFileOnProjectLoad="1" />
+        <File FileGuid="6d8e7637-385e-404e-b4ed-b79ba08830cc" OpenFileOnProjectLoad="1" />
+        <File FileGuid="241c8ac0-ea59-4afc-b879-60e28c7f0794" />
+        <File FileGuid="89ac4fe2-2b98-4361-bcc4-7ffa340adbf6" OpenFileOnProjectLoad="1" />
+        <File FileGuid="2025b509-f94d-4b69-8d2d-823cb8faa5c5" />
+        <File FileGuid="e0200dc9-9b30-4dcb-a2f4-be4a0e33b5ee" />
+        <File FileGuid="96d94326-4a7c-4f71-bcfd-5af71b78db70" OpenFileOnProjectLoad="1" />
+        <File FileGuid="40945eba-70a0-4ace-b8c0-f49eb64e9923" />
+        <File FileGuid="fe0f9828-752f-43ab-a0da-bdf92c89f444" />
+        <File FileGuid="7302e7db-71d1-4469-9567-9dce1e2a79ca" />
+        <File FileGuid="bfc177ac-fe30-49d7-befd-663e35073ccb" />
+        <File FileGuid="e4f63654-68bb-4c90-8678-cf41cdc4f483" />
+        <File FileGuid="7fb59aa1-dc16-4ad7-8147-73c39681aba0" />
+        <File FileGuid="e6eabb06-83fd-4a9d-9f0a-319cc012bdfc" />
+        <File FileGuid="29549a7b-53b7-4e13-8b04-eadfdfa0b03c" />
+        <File FileGuid="f2bb22c5-3089-46d6-99fd-98ff3f01f4b1" />
+        <File FileGuid="47fec399-64fa-477c-a5b9-c5a68fbfbf7d" OpenFileOnProjectLoad="1" />
+        <File FileGuid="00531e57-c89f-47ec-bb60-0ba62a51d375" />
+      </Files>
+      <Folders>
+        <Folder RelPath="Libraries" Expanded="1" />
+        <Folder RelPath="Log Examples" Expanded="0" />
+        <Folder RelPath="Overview" Expanded="0" />
+        <Folder RelPath="Tests" Expanded="0" />
+        <Folder RelPath="Tests\VBS Backup" Expanded="1" />
+        <Folder RelPath="Documentation" Expanded="0" />
+      </Folders>
+    </Project>
+  </Projects>
+</TestDesignStudioSolutionUserSettings>

@@ -1,0 +1,4 @@
+This zip file contains the files appropriate for an
+Intel x86 machine.  A DEC Alpha version is also available
+for download.
+

@@ -1,0 +1,155 @@
+<?xml-stylesheet href='C:\QTPLog.XSL' type='text/xsl'?>
+<QTPLogs>
+  <QTPLog Start="20/01/2008 06:04:27" Status="Fail" End="20/01/2008 06:04:30">
+    <Iteration Status="Pass" Number="1" Start="20/01/2008 06:04:27">
+      <Step>
+        <Status><![CDATA[Warning]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:04:27]]></Time>
+      </Step>
+      <Step>
+        <Status><![CDATA[Fail]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:04:29]]></Time>
+      </Step>
+    </Iteration>
+    <Iteration Status="Warning" Number="2" Start="20/01/2008 06:04:29">
+      <Step>
+        <Status><![CDATA[Warning]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:04:29]]></Time>
+      </Step>
+      <Step>
+        <Status><![CDATA[Fail]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:04:30]]></Time>
+      </Step>
+    </Iteration>
+  </QTPLog>
+  <QTPLog Start="20/01/2008 06:04:35" Status="Fail" End="20/01/2008 06:04:38">
+    <Iteration Status="Fail" Number="1" Start="20/01/2008 06:04:35">
+      <Step>
+        <Status><![CDATA[Warning]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:04:35]]></Time>
+      </Step>
+      <Step>
+        <Status><![CDATA[Fail]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:04:36]]></Time>
+      </Step>
+    </Iteration>
+    <Iteration Status="Fail" Number="2" Start="20/01/2008 06:04:37">
+      <Step>
+        <Status><![CDATA[Something]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:04:37]]></Time>
+      </Step>
+      <Step>
+        <Status><![CDATA[Pass]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:04:38]]></Time>
+      </Step>
+    </Iteration>
+  </QTPLog>
+  <QTPLog Start="20/01/2008 06:33:20" Status="Fail" TestName="" End="20/01/2008 06:33:24">
+    <Iteration Status="Fail" Number="1" Start="20/01/2008 06:33:21">
+      <Step>
+        <Status><![CDATA[Warning]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:33:21]]></Time>
+      </Step>
+      <Step>
+        <Status><![CDATA[Fail]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:33:22]]></Time>
+      </Step>
+    </Iteration>
+    <Iteration Status="Fail" Number="2" Start="20/01/2008 06:33:22">
+      <Step>
+        <Status><![CDATA[Warning]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:33:22]]></Time>
+      </Step>
+      <Step>
+        <Status><![CDATA[Fail]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:33:24]]></Time>
+      </Step>
+    </Iteration>
+  </QTPLog>
+  <QTPLog Start="20/01/2008 06:34:24" Status="Fail" TestName="Test1" End="20/01/2008 06:34:27">
+    <Iteration Status="Fail" Number="1" Start="20/01/2008 06:34:24">
+      <Step>
+        <Status><![CDATA[Warning]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:34:24]]></Time>
+      </Step>
+      <Step>
+        <Status><![CDATA[Fail]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:34:25]]></Time>
+      </Step>
+    </Iteration>
+    <Iteration Status="Fail" Number="2" Start="20/01/2008 06:34:26">
+      <Step>
+        <Status><![CDATA[Warning]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:34:26]]></Time>
+      </Step>
+      <Step>
+        <Status><![CDATA[Fail]]></Status>
+        <StepName><![CDATA[Step 1]]></StepName>
+        <Expected><![CDATA[Window Should Open]]></Expected>
+        <Actual><![CDATA[All OK]]></Actual>
+        <Details><![CDATA[No Details]]></Details>
+        <Time><![CDATA[20/01/2008 06:34:27]]></Time>
+      </Step>
+    </Iteration>
+  </QTPLog>
+</QTPLogs>

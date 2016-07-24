@@ -1,0 +1,73 @@
+Licensing Options and Prices:  http://www.greyware.com/licenses
+
+------------------------------------------------------------------------------
+                         R E G I S T R A T I O N   F O R M
+------------------------------------------------------------------------------
+
+  Information about You:
+
+  First                                 Last
+  Name    ___________________________   Name  _________________________
+
+  Company _____________________________________________________________
+
+  EMail   _____________________________________________________________
+          (example:  john.doe@youraddress.com)
+
+  Street  _____________________________________________________________
+
+          _____________________________________________________________
+
+  City    ________________________  State/Prov.________________________
+
+  Zip/Post________________________  Country    ________________________
+
+  Phone   ________________________  Fax        ________________________
+
+  
+  Select a Product:
+   -------------------------------------------------------------------
+  | Product                         | Quantity | Price Ea |   Price   |
+  |---------------------------------|----------|----------|-----------|
+  | SendSMTP                        |          |   18.00  |           |
+  |---------------------------------|----------|----------|-----------|
+  |                                 |          |          |           |
+  |---------------------------------|----------|----------|-----------|
+  |                                 |          |          |           |
+  |---------------------------------|----------|----------|-----------|
+  |                                 |          |          |           |
+  |---------------------------------|----------|----------|-----------|
+
+                                                    Total:  __________
+
+     
+    Note: Prices may change without notice. Check online (or call us)
+          before placing your order.
+
+
+  __ Check or Money Order enclosed (US Dollars only)
+
+  __ Bill my Visa / Mastercard / Discover / AMEX (circle one)
+
+      Credit card number: ____________________
+
+         Expiration date: ____ (Month) _____ (year)
+
+            Name on card: _____________________
+
+       Signature:____________________________________
+
+  NOTE:  All payments must be in US Dollars, drawn on a US Bank.
+
+Print out this page and send to:
+
+    Greyware Automation Products
+    3300 Big Horn Trail
+    Plano, TX  75075
+    USA
+
+FAX:    972-599-9175
+
+VOICE:  972-867-2794
+
+

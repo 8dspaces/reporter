@@ -1,0 +1,115 @@
+<TestDesignStudioProject FileVersion="1.0" ProjectName="ReporterManager" ProductVersion="1.0.4017.0" Type="QTP" ProjectGuid="f3c94e40-132f-415d-995d-1be050787ef5">
+  <Settings>
+    <Summary>ReporterManager</Summary>
+  </Settings>
+  <References />
+  <Files>
+    <File RelPath="Log Examples\Demo.evt" FileGuid="a0e014ee-755e-486f-9efa-ed315b09a0a0" />
+    <File RelPath="Log Examples\QTP Log.mdb" FileGuid="85aa765a-8bda-4a90-af64-7a3a606cd8c7" />
+    <File RelPath="Libraries\Engines.VBS" FileGuid="a0639851-8aaa-45aa-9bf0-ccae3b4c8ead" DocumentClass="VBS" />
+    <File RelPath="Libraries\Filters.VBS" FileGuid="99311364-0fc1-4674-835a-e2e4e809c9ae" DocumentClass="VBS" />
+    <File RelPath="Libraries\ReporterManager.VBS" FileGuid="6d8e7637-385e-404e-b4ed-b79ba08830cc" DocumentClass="VBS" />
+    <File RelPath="Log Examples\Performance.CSV" FileGuid="241c8ac0-ea59-4afc-b879-60e28c7f0794" />
+    <File RelPath="Tests\ReporterDemo" FileGuid="89ac4fe2-2b98-4361-bcc4-7ffa340adbf6" DocumentClass="QTP" />
+    <File RelPath="ReporterManager.chm" FileGuid="2025b509-f94d-4b69-8d2d-823cb8faa5c5" DocumentClass="CHM" />
+    <File RelPath="Documentation\Hebrew Readme.htm" FileGuid="e0200dc9-9b30-4dcb-a2f4-be4a0e33b5ee" DocumentClass="HTML" />
+    <File RelPath="QTPLog.xsl" FileGuid="96d94326-4a7c-4f71-bcfd-5af71b78db70" DocumentClass="XSLT" />
+    <File RelPath="Documentation\ChangeLog.htm" FileGuid="40945eba-70a0-4ace-b8c0-f49eb64e9923" DocumentClass="HTML" />
+    <File RelPath="Documentation\Readme.htm" FileGuid="f2bb22c5-3089-46d6-99fd-98ff3f01f4b1" DocumentClass="HTML" />
+    <File RelPath="Log Examples\Statistics.CSV" FileGuid="7302e7db-71d1-4469-9567-9dce1e2a79ca" />
+    <File RelPath="Overview\Overview.htm" FileGuid="bfc177ac-fe30-49d7-befd-663e35073ccb" DocumentClass="HTML" />
+    <File RelPath="Log Examples\Error - 02082007 085750.png" FileGuid="e4f63654-68bb-4c90-8678-cf41cdc4f483" />
+    <File RelPath="Log Examples\QTPLog.txt" FileGuid="7fb59aa1-dc16-4ad7-8147-73c39681aba0" DocumentClass="TXT" />
+    <File RelPath="Log Examples\Errors.txt" FileGuid="e6eabb06-83fd-4a9d-9f0a-319cc012bdfc" DocumentClass="TXT" />
+    <File RelPath="Log Examples\QTPLog.XML" FileGuid="29549a7b-53b7-4e13-8b04-eadfdfa0b03c" DocumentClass="XML" />
+    <File RelPath="Tests\VBS Backup\Demo.VBS" FileGuid="fe0f9828-752f-43ab-a0da-bdf92c89f444" DocumentClass="VBS" />
+    <File RelPath="Libraries\Class Templates.VBS" FileGuid="47fec399-64fa-477c-a5b9-c5a68fbfbf7d" DocumentClass="VBS" />
+    <File RelPath="Log Examples\TopView.xls" FileGuid="00531e57-c89f-47ec-bb60-0ba62a51d375" DocumentClass="XLS" />
+  </Files>
+  <Folders>
+    <Folder RelPath="Libraries" Expanded="1" />
+    <Folder RelPath="Log Examples" Expanded="0" />
+    <Folder RelPath="Overview" Expanded="0" />
+    <Folder RelPath="Tests" Expanded="0" />
+    <Folder RelPath="Tests\VBS Backup" Expanded="1" />
+    <Folder RelPath="Documentation" Expanded="0" />
+  </Folders>
+  <Documenter>
+    <Category Name="Documenter" CategoryId="{DB80E2EF-34FC-4ED6-9374-E779A73156C5}">
+      <Setting Name="UseDefaultSettings">false</Setting>
+      <Setting Name="GenerateHtmlHelp">true</Setting>
+      <Setting Name="CompilieHtmlHelp">true</Setting>
+      <Setting Name="GenerateWebFiles">false</Setting>
+      <Setting Name="OpenHtmlHelpAfterBuild">true</Setting>
+      <Setting Name="OpenWebFilesAfterBuild">false</Setting>
+      <Setting Name="OutputName">ReporterManager</Setting>
+      <Setting Name="CreateDirectoryForDocumentation">true</Setting>
+      <Setting Name="OutputDirectory">C:\Documents and Settings\Hamutzi\My Documents\Test Design Studio\Documentation</Setting>
+      <Setting Name="Title">ReporterManager 0.9.2</Setting>
+      <Setting Name="IncludeBuiltInReferences">false</Setting>
+      <Setting Name="IncludeRootPage">true</Setting>
+      <Setting Name="RootPageName">Overview</Setting>
+      <Setting Name="RootPageFile">C:\QTPAutomation\Projects\ReporterManager\0.9\ReporterManager\Overview\Overview.htm</Setting>
+      <Setting Name="AdditionalContentDirectory">
+      </Setting>
+      <Setting Name="ConfigurationFile">C:\QTPAutomation\Projects\ReporterManager\0.9\ReporterManager\document config.xml</Setting>
+      <Setting Name="IncludeSourceCode">true</Setting>
+      <Setting Name="IncludeFilePublicFunctions">true</Setting>
+      <Setting Name="IncludeFilePrivateFunctions">true</Setting>
+      <Setting Name="IncludeFilePublicConstants">true</Setting>
+      <Setting Name="IncludeFilePrivateConstants">true</Setting>
+      <Setting Name="IncludeFilePublicVariables">true</Setting>
+      <Setting Name="IncludeFilePrivateVariables">true</Setting>
+      <Setting Name="IncludeClasses">true</Setting>
+      <Setting Name="IncludeInterfaces">true</Setting>
+      <Setting Name="IncludeEnumerations">true</Setting>
+      <Setting Name="IncludeQuickTestActions">true</Setting>
+      <Setting Name="IncludeClassPublicProperties">true</Setting>
+      <Setting Name="IncludeClassPrivateProperties">true</Setting>
+      <Setting Name="IncludeClassPublicFunctions">true</Setting>
+      <Setting Name="IncludeClassPrivateFunctions">true</Setting>
+      <Setting Name="IncludeClassPublicConstants">true</Setting>
+      <Setting Name="IncludeClassPrivateConstants">true</Setting>
+      <Setting Name="IncludeClassPublicVariables">true</Setting>
+      <Setting Name="IncludeClassPrivateVariables">true</Setting>
+      <Setting Name="IncludeInterfacePublicProperties">true</Setting>
+      <Setting Name="IncludeInterfacePublicFunctions">true</Setting>
+    </Category>
+  </Documenter>
+  <QuickTest>
+    <Category Name="QuickTest" CategoryId="{54CC02B8-DACA-4248-9FFC-70AA41525A66}">
+      <Setting Name="Addins">
+      </Setting>
+      <Setting Name="StartupScript">
+      </Setting>
+      <Setting Name="ExecuteStartupScriptForLaunch">false</Setting>
+      <Category Name="SearchFolders" CategoryId="{0D1E53EB-16AC-4C8F-9ECF-C0C0E94AAA20}">
+        <SearchFolder Priority="0" Include="true" IsCurrentTest="true" />
+      </Category>
+    </Category>
+  </QuickTest>
+  <QualityCenter>
+    <Category Name="Quality Center" CategoryId="{2B7F50C1-FA6D-4E86-B253-315C2784ACE3}">
+      <Setting Name="DefaultConnection">
+      </Setting>
+      <Setting Name="UseDefaultConnection">false</Setting>
+    </Category>
+  </QualityCenter>
+  <Builder>
+    <Category Name="Project Build" CategoryId="{D302E0A0-6527-4BC0-BC63-D039ED1A9DEF}">
+      <Setting Name="PostBuildRunOption">OnSuccessfulBuild</Setting>
+      <Setting Name="PreBuildCommandLine">
+      </Setting>
+      <Setting Name="PostBuildCommandLine">
+      </Setting>
+      <Setting Name="BuildDocumentation">false</Setting>
+      <Setting Name="AssociateLibrariesToTests">true</Setting>
+      <Setting Name="AssociateObjRepToActions">true</Setting>
+      <Setting Name="ExportObjRepToXml">false</Setting>
+      <Setting Name="UpdateTestAddins">false</Setting>
+      <Setting Name="BuildStartupScript">true</Setting>
+      <Setting Name="UpdateRecoveryActivationMode">false</Setting>
+      <Setting Name="RecoveryActivationMode">OnError</Setting>
+    </Category>
+  </Builder>
+</TestDesignStudioProject>

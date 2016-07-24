@@ -1,0 +1,5 @@
+
+**************************         Action1 > Iteration (Test-Action) = 1-1        **************************
+
+08:57:50, Warning, Step 2, Window Should Open, It Didn't
+08:57:50, Fail, Step 3, Window Should Open, App. Crashed

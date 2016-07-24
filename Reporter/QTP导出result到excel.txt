@@ -1,0 +1,215 @@
+QTP导出result到excel
+
+看到了小孩的导出result到excel的代码，但是发现只能导出一个result到某excel文件
+这里小做修改，实现同一个文件的多result导出，回馈论坛。
+
+'参数: ReportExcelFile　报告输出的路径
+Dim  ReportExcelFile
+'ReportExcelFile = Environment ("TestDir")& "\" & " 测试结果" & Date & "-"& Hour(Now) & Minute(Now)& Second(Now) & ".xls"
+ReportExcelFile =  "D:\exp.xls"
+'这个要放在脚本的前面先run
+'描述：GetIP    捕获运行脚本的电脑ＩＰ
+Public Function GetIP
+    ComputerName="."
+    Dim objWMIService,colItems,objItem,objAddress
+    Set objWMIService = GetObject("winmgmts:\\" & ComputerName & "\root\cimv2")
+    Set colItems = objWMIService.ExecQuery("Select * From Win32_NetworkAdapterConfiguration Where IPEnabled = True")
+    For Each objItem in colItems
+        For Each objAddress in objItem.IPAddress
+            If objAddress <> "" then
+                GetIP = objAddress
+                Exit Function
+            End If
+        Next
+    Next
+End Function
+
+'从Report分离的写excel函数
+'参数: sStatus      报告的状态分别为FAIL和PASS
+'参数: sDetails     注释，用来形容测试内容
+'add and modify by dyliu 2009
+Public Function WriteRep(sStatus,sDetails)
+Dim fso
+Dim oExcel
+Dim ExcelFile
+Dim TestcaseName
+Dim objWorkBook
+Dim objSheet
+Dim NewTC
+Dim Status
+Set fso = CreateObject("scripting.FileSystemObject")
+Set oExcel = CreateObject("Excel.Application")
+
+Status=UCase(sStatus)
+oExcel.Visible = false 'True  
+
+TestcaseName = Environment("TCase")
+Set objWorkBook = oExcel.Workbooks.Open(ReportExcelFile)
+Set objSheet = oExcel.Sheets("测试结果")
+
+With objSheet
+'设置行数和是否NewTc标识
+  Environment.Value("Row")  = .Range("C7").Value + 11
+  NewTC = False
+
+  If TestcaseName <> objSheet.Cells(Environment("Row")-1,2).value Then
+      .Cells(Environment("Row"),2).value = TestcaseName
+      .Cells(Environment("Row"), 3).Value = Status
+      .Cells(Environment("Row"), 4).value = sDetails
+  
+   Select Case Status
+       Case "FAIL"
+            .Range("C" & Environment("Row")).Font.ColorIndex = 3
+       Case "PASS"
+            .Range("C" & Environment("Row")).Font.ColorIndex = 50
+                            Case "WARNING"
+            .Range("C" & Environment("Row")).Font.ColorIndex = 5
+   End Select
+
+  NewTC = True
+  .Range("C7").Value = .Range("C7").Value + 1
+  '设置边界
+  .Range("B" & Environment("Row") & ":D" & Environment("Row")).Borders(1).LineStyle = 1
+  .Range("B" & Environment("Row") & ":D" & Environment("Row")).Borders(2).LineStyle = 1
+  .Range("B" & Environment("Row") & ":D" & Environment("Row")).Borders(3).LineStyle = 1
+  .Range("B" & Environment("Row") & ":D" & Environment("Row")).Borders(4).LineStyle = 1
+  '设置字体和颜色
+  .Range("B" & Environment("Row") & ":D" & Environment("Row")).Interior.ColorIndex = 19
+  .Range("B" & Environment("Row")).Font.ColorIndex = 53
+  .Range("D" & Environment("Row")).Font.ColorIndex = 41
+  .Range("B" & Environment("Row") & ":D" & Environment("Row")).Font.Bold = True
+
+
+  End If
+
+  If (Not NewTC) And (Status = "FAIL") Then
+   .Cells(Environment("Row"), 3).Value = "Fail"
+   .Range("C" & Environment("Row")).Font.ColorIndex = 3
+  end If
+  
+  '更新结束时间
+  .Range("C5").Value = Time
+  
+  .Columns("B:D").Select
+  '.Columns("B:D").Autofit
+End With
+oExcel.ActiveWindow.FreezePanes = True
+
+'保存结果
+objWorkBook.Save
+  oExcel.Quit
+Set objSheet = Nothing
+Set objWorkBook = Nothing
+Set oExcel = Nothing
+Set fso = Nothing
+
+End Function
+'描述：Report       报告函数
+'用于创建excel文件
+Public Function Report()
+'定义变量
+Dim fso
+Dim oExcel
+Dim ExcelFile
+Dim TestcaseName
+Dim objWorkBook
+Dim objSheet
+Dim NewTC
+
+Set fso = CreateObject("scripting.FileSystemObject")
+Set oExcel = CreateObject("Excel.Application")
+
+oExcel.Visible = false 'True  
+   
+
+'设置Excel报告样式
+If  Not fso.FileExists(ReportExcelFile)Then
+  oExcel.Workbooks.Add
+  
+  '获取工作簿的第一个Sheet页
+  Set objSheet = oExcel.Sheets.Item(1)
+  oExcel.Sheets.Item(1).Select
+  
+  With objSheet
+   .Name = "测试结果"
+   '设置列宽
+   .Columns("A:A").ColumnWidth = 5
+   .Columns("B:B").ColumnWidth = 35
+   .Columns("C:C").ColumnWidth = 12.5
+   .Columns("D:D").ColumnWidth = 60
+   .Columns("A:D").HorizontalAlignment = -4131
+   .Columns("A:D").WrapText = True
+   '设置显示区域的字体类型和大小
+   .Range("A:D").Font.Name = "Arial"
+   .Range("A:D").Font.Size = 10
+   
+   '设置文件头格式
+   .Range("B1").Value = "测试结果"
+   .Range("B1:C1").Merge
+    '设置文件头格式字体和颜色
+   .Range("B1:C1").Interior.ColorIndex = 53
+   .Range("B1:C1").Font.ColorIndex = 19
+   .Range("B1:C1").Font.Bold = True
+   
+   '设置执行的日期和时间
+   .Range("B3").Value = "测试日期:"
+   .Range("B4").Value = "执行时间:"
+   .Range("B5").Value = "结束时间:"
+   .Range("B6").Value = "执行时长: "   
+   .Range("C3").Value = Date
+   .Range("C4").Value = Time
+   .Range("C5").Value = Time
+   .Range("C6").Value = "=R[-1]C-R[-2]C"
+   .Range("C6").NumberFormat = "[h]:mm:ss;@"
+   
+   '设置日期和时间cell的边界
+   .Range("C3:C8").HorizontalAlignment = 4 '右边对齐
+   .Range("C3:C8").Font.Bold = True
+   .Range("C3:C8").Font.ColorIndex = 7
+   .Range("B3:C8").Borders(1).LineStyle = 1
+   .Range("B3:C8").Borders(2).LineStyle = 1
+   .Range("B3:C8").Borders(3).LineStyle = 1
+   .Range("B3:C8").Borders(4).LineStyle = 1
+   
+   '设置日期和时间Cell的样式
+   .Range("B3:C8").Interior.ColorIndex = 40
+   .Range("B3:C8").Font.ColorIndex = 12
+   .Range("C3:C8").Font.ColorIndex = 7
+   .Range("B3:A8").Font.Bold = True
+   .Range("B7").Value = "执行总数:"
+   .Range("C7").Value = "0"
+   .Range("B8").Value = "测试机器:"
+   .Range("C8").Value =GetIP()
+   .Range("B10").Value = "测试业务"
+   .Range("C10").Value = "结果"
+   .Range("D10").Value = "注释"
+   
+   '为Result Summery设置格式
+   .Range("B10:D10").Interior.ColorIndex = 53
+   .Range("B10:D10").Font.ColorIndex = 19
+   .Range("B10:D10").Font.Bold = True
+   
+   '为Result Summery设置边界
+   .Range("B10:D10").Borders(1).LineStyle = 1
+   .Range("B10:D10").Borders(2).LineStyle = 1
+   .Range("B10:D10").Borders(3).LineStyle = 1
+   .Range("B10:D10").Borders(4).LineStyle = 1
+   .Range("B10:D10").HorizontalAlignment = -4131
+   .Range("C11:C1000").HorizontalAlignment = -4131
+   .Columns("B:D").Select
+   ' .Columns("B:D").Autofit
+   .Range("B11").Select  
+  End With
+  oExcel.ActiveWindow.FreezePanes = True
+  oExcel.ActiveWorkbook.SaveAs  ReportExcelFile
+  oExcel.Quit
+  Set objSheet = Nothing
+End If
+
+End Function
+
+
+用法：
+首先执行第一句，定义输出路径
+然后执行一次Call Report()创建excel文件
+每次根据需要，调用新函数WriteRep(sStatus,sDetails)往xls文件中写result

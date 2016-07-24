@@ -1,0 +1,57 @@
+好的测试报告最好自已用程序写出来，因为QTP自带的测试报告并没有突出重点
+我这里有一分自己的教本，你可以参考一下
+'Option explicit
+Dim result,list,temp,row1,row2,i
+Dim ActualResult
+list=DataTable("list", dtGlobalSheet)
+'写文件
+Set fileSystemObj = CreateObject("Scripting.FileSystemObject")
+fileSpec ="C:\" &"测试报告"& ".txt" 
+Set logFile = fileSystemObj.OpenTextFile(fileSpec, 8, true) 
+'Set f = fso.OpenTextFile("c:\testfile.txt", ForWriting, True)
+logFile.WriteLine ("#######################################################################")
+logFile.WriteLine ("测试用例"+list+"：")
+
+Window("Softdog管理客户端").Activate
+Window("Softdog管理客户端").Window("新建软件更换订单").WinObject("MFCGridCtrl").Click 850,380
+Window("Softdog管理客户端").Window("新建软件更换订单").WinEditor("Edit").Type DataTable("Account", dtGlobalSheet)
+row1=DataTable("Account", dtGlobalSheet)
+row1=cstr(row1)
+Window("Softdog管理客户端").Window("新建软件更换订单").WinEditor("Edit").Type  micReturn
+Window("Softdog管理客户端").Window("新建软件更换订单").WinObject("MFCGridCtrl").Click 935,381
+Window("Softdog管理客户端").Window("新建软件更换订单").WinEditor("Edit").Type DataTable("Discount", dtGlobalSheet)
+row2=DataTable("Discount", dtGlobalSheet)
+row2=cstr(row2)
+Window("Softdog管理客户端").Window("新建软件更换订单").WinEditor("Edit").Type  micReturn
+Window("Softdog管理客户端").Window("新建软件更换订单").WinObject("MFCGridCtrl").Click 1108,382
+Window("Softdog管理客户端").Window("新建软件更换订单").WinEditor("Edit").Type micCtrlDwn + "c" + micCtrlUp
+Window("Form1").Activate
+Window("Form1").WinObject("WindowsForms10.EDIT.app.0.3787").Click 95,10
+Window("Form1").WinObject("WindowsForms10.EDIT.app.0.3787").Type micCtrlDwn + "v" + micCtrlUp
+'获取应收金额数值    RunTime
+result =trim(Window("Form1").WinObject("WindowsForms10.EDIT.app.0.3787").GetROProperty("text"))
+'Test
+ActualResult=trim(Round(DataTable("Account", dtGlobalSheet),   2) * Round(DataTable("Discount", dtGlobalSheet),   2) * 0.01)
+ActualResult=Round(ActualResult,2)
+
+'打印测试报告
+If cstr(result)=cstr(ActualResult) Then
+        logFile.WriteLine ("测试通过")
+        logFile.WriteLine (" ")
+else
+        logFile.WriteLine ("测试不通过")
+        logFile.WriteLine ("更换金额："+row1+space(6)+"折扣："+row2)
+        logFile.WriteLine ("实际值："+cstr(result))
+        logFile.WriteLine ("期望值："+cstr(ActualResult))
+        logFile.WriteLine (" ")
+End If
+
+'清楚文本框内容
+Window("Form1").Activate
+While Window("Form1").WinObject("WindowsForms10.EDIT.app.0.3787").GetROProperty("text")<>""
+Window("Form1").WinObject("WindowsForms10.EDIT.app.0.3787").Type  micBack
+Wend
+
+'关闭文件
+logFile.Close
+Set logFile = Nothing

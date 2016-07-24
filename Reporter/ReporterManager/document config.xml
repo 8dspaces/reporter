@@ -1,0 +1,14 @@
+﻿<help-config>
+  <toc>
+    <topic type="root"/> <!-- Root Page from Documenter Wizard -->
+
+    <!-- Sample HTML-based topics -->
+    <topic type="html" source="C:\QTPAutomation\Projects\ReporterManager\0.9\ReporterManager\Overview\Overview.htm" title="Project Documentation">
+	    <topic type="html" source="C:\QTPAutomation\Projects\ReporterManager\0.9\ReporterManager\Documentation\ChangeLog.htm" title="Version changelog"/>
+	    <topic type="html" source="C:\QTPAutomation\Projects\ReporterManager\0.9\ReporterManager\Documentation\Readme.htm" title="Extensive readme"/>	    
+    </topic>
+
+    <topic type="user-content" /> <!-- Generated Pages from your Project Files -->
+    <topic type="built-in-references" /> <!-- Generated Pages for Built-in References -->
+  </toc>
+</help-config>

@@ -1,0 +1,12 @@
+<TestDesignStudioSolution SolutionName="ReporterManager" ProductVersion="1.0.4017.0" SolutionGuid="00000000-0000-0000-0000-000000000000">
+  <Settings>
+    <Description>ReporterManager 0.9</Description>
+  </Settings>
+  <Projects>
+    <Project Path="ReporterManager.qtpproj" ProjectGuid="f3c94e40-132f-415d-995d-1be050787ef5" Loaded="1" />
+  </Projects>
+  <UserTasks>
+    <Task Description="" Completed="0" Priority="Normal" />
+  </UserTasks>
+  <ShortcutTasks />
+</TestDesignStudioSolution>
